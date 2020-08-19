@@ -15,3 +15,5 @@
   * **Query params:** Filtros e paginação
   * **Route params:** Identificar recursos (Atualizar/Deletar)
   * **Request body:** Conteúdo na hora de criar ou editar um recurso (JSON)
+
+* Middleware: Interceptador de requisições que pode interromper totalmente a requisição ou alterar dados da requisição, todo o express é baseado em middlewares.~~~~
