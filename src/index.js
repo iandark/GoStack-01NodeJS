@@ -4,12 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(
-    cors({
-        origin: "http://localhost:8080",
-        optionsSuccessStatus: 200, //
-    })
-);
+app.use(cors());
 const projects = [];
 
 app.use(express.json());
