@@ -1,7 +1,9 @@
 const express = require("express");
 const { v4: uuidv4, validate: uuidValidate } = require("uuid");
 const cors = require("cors");
+const dotenv = require("dotenv");
 
+dotenv.config();
 const app = express();
 
 app.use(cors());
@@ -82,6 +84,6 @@ app.delete("/projects/:id", (request, response) => {
     return response.status(204).send();
 });
 
-app.listen(3333, () => {
-    console.log("🔥 Back-end started!");
+app.listen(process.env.PORT || 3333, () => {
+    console.log(`🔥 Back-end started on port ${process.env.PORT || 3333}!`);
 });
