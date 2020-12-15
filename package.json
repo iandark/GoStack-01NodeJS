@@ -10,7 +10,7 @@
         "uuidv4": "^6.2.3"
     },
     "scripts": {
-        "start": "if [$NODE_ENV == 'production']; then node app.js; else nodemon app.js; fi",
+        "start": "node app.js",
         "dev": "nodemon"
     },
     "devDependencies": {
