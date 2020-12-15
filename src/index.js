@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 const app = express();
+app.set('title', 'GoStack');
 
 app.use(cors());
 const projects = [];
@@ -31,6 +32,11 @@ function validateProjectId(request, response, next) {
 }
 
 app.use(logRequest); // chamada global
+
+app.get('/', (request, response) => {
+  return response.status(204).send();
+});
+
 app.use("/projects/:id", validateProjectId);
 
 app.get("/projects", (request, response) => {
