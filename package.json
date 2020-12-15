@@ -10,7 +10,7 @@
         "uuidv4": "^6.2.3"
     },
     "scripts": {
-        "start": "node app.js",
+        "start": "node src/index.js",
         "dev": "nodemon"
     },
     "devDependencies": {
